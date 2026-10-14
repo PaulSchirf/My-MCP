@@ -15,6 +15,23 @@
       }
     },
     {
+      "name": "Launch My-MCP (Streamable HTTP)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/MyMcp.Server/bin/Debug/net10.0/MyMcp.Server.dll",
+      "args": ["--http"],
+      "cwd": "${workspaceFolder}/src/MyMcp.Server",
+      "stopAtEntry": false,
+      "env": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "Now listening on: (https?://\\S+)"
+      }
+    },
+    {
       "name": "Attach to My-MCP",
       "type": "coreclr",
       "request": "attach"

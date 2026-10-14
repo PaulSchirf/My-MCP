@@ -8,9 +8,11 @@
     <UserSecretsId>ddc5c0b3-909d-4242-9dde-95e31a09d908</UserSecretsId>
   </PropertyGroup>
 
+  <!-- The AspNetCore package supplies both transports (the stdio transport comes from its
+       ModelContextProtocol dependency) plus the Microsoft.AspNetCore.App framework reference,
+       which also provides Microsoft.Extensions.Hosting for the stdio host. -->
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.10" />
-    <PackageReference Include="ModelContextProtocol" Version="2.2.0" />
+    <PackageReference Include="ModelContextProtocol.AspNetCore" Version="2.2.0" />
   </ItemGroup>
 
   <!-- The web SDK copied appsettings*.json to the output automatically; the plain
